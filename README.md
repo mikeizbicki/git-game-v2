@@ -13,7 +13,7 @@ example output:
     216 main.cpp
     780 total
 
-So if the total number is 780 then you would checkout to 780.
+So if the total number is 780 then you would checkout to branch name  780.
  
 Are you following me? 
 Good!
