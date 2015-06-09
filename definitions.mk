@@ -1,24 +1,38 @@
-#   $(ALL_MODULES.$(target)).INSTALLED
-# The BUILT variable contains LOCAL_BUILT_MODULE for that
-# target, and the INSTALLED variable contains the LOCAL_INSTALLED_MODULE.
-# Some targets may have multiple files listed in the BUILT and INSTALLED
-# sub-variables.
-ALL_MODULES:=
-
-# Full paths to targets that should be added to the "make droid"
-# set of installed targets.
-ALL_DEFAULT_INSTALLED_MODULES:=
-
-# The list of tags that have been defined by
-# LOCAL_MODULE_TAGS.  Each word in this variable maps
-# to a corresponding ALL_MODULE_TAGS.<tagname> variable
-# that contains all of the INSTALLED_MODULEs with that tag.
-ALL_MODULE_TAGS:=
-
 # Similar to ALL_MODULE_TAGS, but contains the short names
 # of all targets for a particular tag.  The top-level variable
+
+
+
+
+
+
+
+
 # won't have the list of tags;  ust ALL_MODULE_TAGS to get
 # the list of all known tags.  (This means that this variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
