@@ -1,23 +1,3 @@
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
-##
-## Common build system definitions.  Mostly standard
-## commands for building various types of targets, which
-# The short names of all of the targets in the system.
-# For each element of ALL_MODULES, two other variables
-# are defined:
-#   $(ALL_MODULES.$(target)).BUILT
 #   $(ALL_MODULES.$(target)).INSTALLED
 # The BUILT variable contains LOCAL_BUILT_MODULE for that
 # target, and the INSTALLED variable contains the LOCAL_INSTALLED_MODULE.
@@ -39,6 +19,11 @@ ALL_MODULE_TAGS:=
 # of all targets for a particular tag.  The top-level variable
 # won't have the list of tags;  ust ALL_MODULE_TAGS to get
 # the list of all known tags.  (This means that this variable
+
+
+
+
+
 # will always be empty; it's just here as a placeholder for
 # its sub-variables.)
 ALL_MODULE_NAME_TAGS:=

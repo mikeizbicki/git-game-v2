@@ -240,8 +240,7 @@ ifneq (2,$(words $(HOST_OUT) $(PRODUCT_OUT)))
 endif
 
 # Define the rules for commandline invocation.
-.PHONY: dataclean
-dataclean: FILES := $(dataclean_files)
+.PHONY: dataclean ## THIS WAS MOVED ON PURPOSE dataclean: FILES := $(dataclean_files)
 dataclean:
 	$(hide) rm -rf $(FILES)
 	@echo -e ${CL_GRN}"Deleted emulator userdata images."${CL_RST}
