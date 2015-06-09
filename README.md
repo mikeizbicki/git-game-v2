@@ -1,5 +1,5 @@
-#Level 0
-Welcome to level zero, let’s jump right in! 
+#Level 1
+Welcome to level one, let’s jump right in! 
 
 This level is designed to show you the power of [```git ls-files```](http://git-scm.com/docs/git-ls-files) command.
 As you can see there are multiple files in this branch when you run ```ls```. 
