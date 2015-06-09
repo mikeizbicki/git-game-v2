@@ -9,9 +9,9 @@ Well with ten thousand commits this is nearly impossible!
 
 But ```git bisect``` uses binary search, a much faster search algorithm that repeatedly cuts the search range in half until it finds what it needs!
 
-First step is to initalize git bisect by typing in ```git bisect start```.
+The first step is to initalize git bisect by typing in ```git bisect start```.
 This begins the git bisect process.
-Next, we reccomend you open a second terminal and run the command ```git log --pretty=oneline --reverse | head -1```.
+Next, we recommend you open a second terminal and run the command ```git log --pretty=oneline --reverse | head -1```.
 That will automatically give you the commit hash of the initial commit.
 Then you should run ```git bisect good``` and type in the initial commit hash given by the command above.
 Git bisect needs a starting point before the error was introduced.
