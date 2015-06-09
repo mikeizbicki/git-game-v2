@@ -1,6 +1,3 @@
-#
-# Copyright (C) 2008 The Android Open Source Project
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -17,15 +14,6 @@
 ##
 ## Common build system definitions.  Mostly standard
 ## commands for building various types of targets, which
-## are used by others to construct the final targets.
-##
-
-# These are variables we use to collect overall lists
-# of things being processed.
-
-# Full paths to all of the documentation
-ALL_DOCS:=
-
 # The short names of all of the targets in the system.
 # For each element of ALL_MODULES, two other variables
 # are defined:
