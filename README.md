@@ -1,29 +1,31 @@
-#git-game-v2
-Second version of the terminal based game that teaches users git commands
+#Level 9
 
-Hello there! 
-This is the sequel to the famous git-game! 
-Throughout the course of this awesome adventure you will be presented with 9 puzzles. 
-To proceed to the successive levels you will need to execute special git commands in order to solve a series of riddles and tasks. 
-Once you complete the game you will have acquired a deeper understanding of the git version control system.
+The [hackers](http://en.wikipedia.org/wiki/Anonymous_%28group%29) finally have left!
+But before they escaped they ruined the lyrics of our favorite song!
+Your task is as follows: use [```git bisect```](http://git-scm.com/docs/git-bisect) to repair the lyrics to their original format.
+Now I know what you're thinking, why not use a linear search to find where they destroy the lyrics?
 
-##Let’s begin! 
-clone this repository using the command below:
+Well with ten thousand commits this is nearly impossible!
 
-```$ git clone https://github.com/git-game/git-game-v2.git```
+But ```git bisect``` uses binary search, a much faster search algorithm that repeatedly cuts the search range in half until it finds what it needs!
 
-##Want to play the first git-game?
+First step is to initalize git bisect by typing in ```git bisect start```.
+This begins the git bisect process.
+Next, we reccomend you open a second terminal and run the command ```git log --pretty=oneline --reverse | head -1```.
+That will automatically give you the commit hash of the initial commit.
+Then you should run ```git bisect good``` and type in the initial commit hash given by the command above.
+Git bisect needs a starting point before the error was introduced.
+Next run the following command in the second termina: ```git log --pretty=oneline --reverse | tail -1```.
+This gives you the last commit hash (no one wants to traverse 10,000 commits one by one to get to the last).
+Run ```git bisect bad``` and type in also the hash of the last commit after typing in git bisect bad.
+What this does is gives git bisect an ending point where it know that the error is for sure inside of the commits.
 
-[first git-game](https://github.com/git-game/git-game)
+At this point, git bisect will now execute the binary search traversing through history.
+The [hackers](http://en.wikipedia.org/wiki/Anonymous_%28group%29) changed the lyric of our favorite song from ```twinkle to racecar```.
+As you are traversing through the commits, cat the ```test.txt``` file,  if you see the words racecar within the the ```test.txt``` file, type in ```git bisect bad``` indicating that the error is within this half of the commits.
+If you do not see the words ```racecar and you see twinkle```, that represents a good commit as the error commit was not introduced before that point. You would type ```git bisect good```.
 
-##Don’t know a lot about git?
-Check these links out
+Once you it says it has found the error commit, run ```ls``` and if you see a message file that contains a congragulations message, than you have succeeded in using git bisect.
+If not, run ```git bisect reset``` and repeat as much as necessary until the correct answer is reached.
 
-https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/textbook/cheatsheets/git-cheatsheet.md
-https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/tools/git/advanced-git
-https://www.kernel.org/pub/software/scm/git/docs/ 
-
-You should always check the README.md file for your next clue!
-To start on your epic journey type the following command:
-
-```$ git checkout level0```
+*Hint: * If you are still having trouble, here is a wonderful tutorial on how to use ```git bisect``` http://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination
