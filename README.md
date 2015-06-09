@@ -1,5 +1,5 @@
 #Level 2
-Welcome to level 1!  Below is a riddle whose possible answer choices can be found by running the command:
+You're now in level 2!  Below is a riddle whose possible answer choices can be found by running the command:
 
 ```$ git log```
 
