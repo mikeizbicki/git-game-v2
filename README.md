@@ -1,7 +1,7 @@
 #Level 1
 Welcome to level one, let’s jump right in! 
 
-This level is designed to show you the power of [```git ls-files```](http://git-scm.com/docs/git-ls-files) command.
+This level is designed to show you the power of the [```git ls-files```](http://git-scm.com/docs/git-ls-files) command.
 As you can see there are multiple files in this branch when you run ```ls```. 
 Your task is to count all the lines of code and text in the files.
 Once this is done you are to checkout to the branch that is named after the total number of lines. 
