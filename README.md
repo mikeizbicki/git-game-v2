@@ -23,7 +23,8 @@ What this does is gives git bisect an ending point where the error is definitely
 At this point, git bisect will now execute the binary search traversing through history.
 The [hackers](http://en.wikipedia.org/wiki/Anonymous_%28group%29) changed the lyrics of our favorite song from ```twinkle to racecar```.
 As you are traversing through the commits, cat the ```test.txt``` file,  if you see the words racecar within the ```test.txt``` file, type in ```git bisect bad``` indicating that the error is within this half of the commits.
-If you do not see the words racecar and you see twinkle, that represents a good commit as the error commit was not introduced before that point. You would type ```git bisect good```.
+If you do not see the words racecar and you see twinkle, that represents a good commit as the error commit was not introduced before that point. You would type ```git bisect good```. If the ```test.txt``` is not present and it's just the README in the directory this represents a point in time that the ```test.txt``` file did not exist.
+This means no error existed either, so therefore you would type in ```git bisect good```.
 
 Once the process says it has found the error commit, run ```ls```.
 If there is a file named message view its contents to proceed forth to glory!
